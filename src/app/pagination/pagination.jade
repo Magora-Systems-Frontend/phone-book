@@ -1,4 +1,4 @@
-div.col-sm-3.pagination
-    button.pull-left.btn.btn-primary.btn-sm(ng-disabled="paginationCtrl.firstPage()", ng-click="paginationCtrl.pageBack()") Prev
-    span {{paginationCtrl.currentPage+1}} from {{paginationCtrl.numberOfPages()}}
-    button.pull-right.btn.btn-primary.btn-sm(ng-disabled="paginationCtrl.lastPage()", ng-click="paginationCtrl.pageForward()") Next
+div.pagination
+    button.btn.btn-primary.btn-sm(ng-disabled="paginationCtrl.firstPage()", ng-click="paginationCtrl.pageBack()") Prev
+    span.pages {{paginationCtrl.currentPage+1}} from {{paginationCtrl.numberOfPages()}}
+    button.btn.btn-primary.btn-sm(ng-disabled="paginationCtrl.lastPage()", ng-click="paginationCtrl.pageForward()") Next

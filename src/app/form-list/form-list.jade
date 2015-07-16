@@ -1,6 +1,9 @@
 div.row
+    div.page-header.clearfix
+        div.col-sm-12
+            h1 PhoneBook
     div.col-sm-6
-        form(role="form" ng-submit="phoneBook.addPerson()")
+        form.person-form(role="form" ng-submit="phoneBook.addPerson()")
             div.form-group
                 label(for="surname") Surname
                 input.form-control#surname(type="text", ng-model="phoneBook.person.surname")
@@ -10,7 +13,7 @@ div.row
             div.form-group
                 label(for="phone") Phone
                 input.form-control#phone(type="text", ng-model="phoneBook.person.phone")
-            button Add
+            button.btn.btn-success Add
     div.col-sm-6
         ul.list-group
             li.list-group-item(ng-repeat='person in phoneBook.persons | startFrom: phoneBook.startingItem() | limitTo: phoneBook.itemsPerPage track by $index') {{person.surname}} {{person.name}} {{person.phone}}
