@@ -1,0 +1,22 @@
+doctype html
+html(lang="en" ng-app="app")
+    head
+        base(href="/")
+        meta(charset="UTF-8")
+        meta(name="viewport")
+        meta(content="width=device-width, initial-scale=1")
+        include copyright
+        style
+            include ../bower_components/bootstrap/dist/css/bootstrap.min.css
+            include ../public/application.css
+    body
+        div.container-fluid(ng-view)
+
+        script(type='text/javascript')
+            include ../bower_components/angular/angular.min.js
+            include ../bower_components/angular-route/angular-route.min.js
+            include ../bower_components/angular-cache/dist/angular-cache.min.js
+
+        script(type='text/javascript')
+            include ../public/application.js
+            include ../public/templates.js
