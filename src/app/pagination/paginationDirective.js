@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('app.pagination')
+        .module('app.list')
         .directive('pagination', pagination);
 
     function pagination(){
@@ -17,9 +17,6 @@
             bindToController: true,
             templateUrl: 'app/pagination/pagination.html',
             controller: function(){
-                /*this.currentPage = 0;
-                this.itemsPerPage = 5;*/
-
                 this.firstPage = function() {
                     return this.currentPage == 0;
                 };
@@ -31,7 +28,6 @@
 
                 this.numberOfPages = function(){
                     var a = Math.ceil(this.items.length / this.itemsPerPage);
-                    //debugger;
                     return Math.ceil(this.items.length / this.itemsPerPage);
                 };
 

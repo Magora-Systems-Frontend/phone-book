@@ -1,0 +1,27 @@
+div.row
+    div.page-header.clearfix
+        div.col-sm-12
+            h1 PhoneBook
+    div.col-sm-6
+        form.person-form(role="form" ng-submit="phoneBook.addPerson()")
+            div.form-group
+                label(for="surname") Surname
+                input.form-control#surname(type="text", ng-model="phoneBook.person.surname")
+            div.form-group
+                label(for="name") Name
+                input.form-control#name(type="text", ng-model="phoneBook.person.name")
+            div.form-group
+                label(for="phone") Phone
+                input.form-control#phone(type="text", ng-model="phoneBook.person.phone")
+            button.btn.btn-success Add
+    div.col-sm-6.list-wr
+        ul.list-group
+            list(
+                    ng-repeat='item in phoneBook.persones | startFrom: listCtrl.startingItem() | limitTo: phoneBook.itemsPerPage track by $index',
+                    items="phoneBook.persons",
+                    current-page="phoneBook.currentPage",
+                    items-per-page="phoneBook.itemsPerPage",
+                    edit-person="phoneBook.editPerson(listCtrl.currentPage*listCtrl.itemsPerPage + $index)",
+                    delete-person="phoneBook.deletePerson(listCtrl.currentPage*listCtrl.itemsPerPage + $index)"
+                )
+            pagination(items="phoneBook.items", current-page="phoneBook.currentPage", items-per-page="phoneBook.itemsPerPage")

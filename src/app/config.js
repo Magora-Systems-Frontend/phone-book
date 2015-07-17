@@ -8,7 +8,7 @@
     function config($routeProvider, $locationProvider){
         $routeProvider
             .when('/', {
-                templateUrl: 'app/form-list/form-list.html',
+                templateUrl: 'app/form/form.html',
                 controller: 'PhoneBookController',
                 controllerAs: 'phoneBook'
             });

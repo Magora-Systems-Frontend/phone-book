@@ -42,7 +42,7 @@
         phoneBook.deletePerson = function(id){
             phoneBook.persons.splice(id, 1);
 
-            phoneBook._sync();
+            PhoneBookController._sync();
         };
 
         phoneBook.editPerson = function(id){
@@ -56,10 +56,6 @@
 
         phoneBook.isNewRecord = function(){
             return this.persons.indexOf(this.person) === -1;
-        };
-
-        phoneBook.startingItem = function() {
-            return this.currentPage * this.itemsPerPage;
         };
     }
 

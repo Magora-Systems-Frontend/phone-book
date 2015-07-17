@@ -6,7 +6,7 @@
         .module('app', [
             'ngRoute',
             'angular-cache',
-            'app.pagination'
+            'app.list'
         ])
 
 })(window, angular);

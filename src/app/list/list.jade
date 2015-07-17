@@ -1,0 +1,3 @@
+li.list-group-item {{item.surname}} {{item.name}} {{item.phone}}
+    span.glyphicon.glyphicon-remove(ng-click='listCtrl.deletePerson(listCtrl.currentPage*listCtrl.itemsPerPage + $index)')
+    span.glyphicon.glyphicon-pencil(ng-click='listCtrl.editPerson(listCtrl.currentPage*listCtrl.itemsPerPage + $index)')
