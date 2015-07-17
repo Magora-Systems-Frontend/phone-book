@@ -57,6 +57,10 @@
         phoneBook.isNewRecord = function(){
             return this.persons.indexOf(this.person) === -1;
         };
+
+        phoneBook.startingItem = function() {
+            return phoneBook.currentPage * phoneBook.itemsPerPage;
+        };
     }
 
 })(window, angular);

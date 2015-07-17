@@ -20,10 +20,6 @@
             templateUrl: 'app/list/list.html',
             controller: function(){
                 var listPersons = this;
-
-                listPersones.startingItem = function() {
-                    return listPersons.currentPage * listPersons.itemsPerPage;
-                };
             },
             controllerAs: 'listCtrl'
         }
