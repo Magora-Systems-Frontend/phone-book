@@ -14,14 +14,6 @@ div.row
                 label(for="phone") Phone
                 input.form-control#phone(type="text", ng-model="phoneBook.person.phone")
             button.btn.btn-success Add
-    div.col-sm-6.list-wr
-        ul.list-group
-            list(
-                    ng-repeat='person in phoneBook.persons | startFrom: phoneBook.startingItem() | limitTo: phoneBook.itemsPerPage track by $index',
-                    items="phoneBook.persons",
-                    current-page="phoneBook.currentPage",
-                    items-per-page="phoneBook.itemsPerPage",
-                    edit-person="phoneBook.editPerson(phoneBook.currentPage*phoneBook.itemsPerPage + $index)",
-                    delete-person="phoneBook.deletePerson(phoneBook.currentPage*phoneBook.itemsPerPage + $index)"
-                )
-        pagination(items="phoneBook.persons", current-page="phoneBook.currentPage", items-per-page="phoneBook.itemsPerPage")
+    list(items="phoneBook.persons",
+            current-page="phoneBook.currentPage",
+            items-per-page="phoneBook.itemsPerPage")

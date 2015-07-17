@@ -1,3 +1,6 @@
-li.list-group-item {{person.surname}} {{person.name}} {{person.phone}}
-    span.glyphicon.glyphicon-remove(ng-click='listCtrl.deletePerson(listCtrl.currentPage*listCtrl.itemsPerPage + $index)')
-    span.glyphicon.glyphicon-pencil(ng-click='listCtrl.editPerson(listCtrl.currentPage*listCtrl.itemsPerPage + $index)')
+div.col-sm-6.list-wr
+    ul.list-group
+        li.list-group-item(ng-repeat='person in phoneBook.persons | startFrom: phoneBook.startingItem() | limitTo: phoneBook.itemsPerPage track by $index') {{person.surname}} {{person.name}} {{person.phone}}
+            span.glyphicon.glyphicon-remove(ng-click='phoneBook.deletePerson(listCtrl.currentPage*listCtrl.itemsPerPage + $index)')
+            span.glyphicon.glyphicon-pencil(ng-click='phoneBook.editPerson(listCtrl.currentPage*listCtrl.itemsPerPage + $index)')
+        pagination(items="phoneBook.persons", current-page="phoneBook.currentPage", items-per-page="phoneBook.itemsPerPage")
