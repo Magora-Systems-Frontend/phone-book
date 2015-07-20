@@ -1,4 +1,4 @@
-(function(window, angular){
+(function(angular){
 
     'use strict';
 
@@ -39,14 +39,15 @@
             phoneBook._sync();
         };
 
-        phoneBook.deletePerson = function(id){
-            phoneBook.persons.splice(id, 1);
+        phoneBook.deletePerson = function(){
+            phoneBook.persons.splice(phoneBook.current, 1);
 
             phoneBook._sync();
         };
 
-        phoneBook.editPerson = function(id){
-            this.person = phoneBook.persons[id];
+        phoneBook.editPerson = function(){
+            console.log('phoneBook.current ' + phoneBook.current);
+            this.person = phoneBook.persons[phoneBook.current];
 
         };
 
@@ -57,10 +58,6 @@
         phoneBook.isNewRecord = function(){
             return this.persons.indexOf(this.person) === -1;
         };
-
-        phoneBook.startingItem = function() {
-            return this.currentPage * this.itemsPerPage;
-        };
     }
 
-})(window, angular);
+})(angular);

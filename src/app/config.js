@@ -1,4 +1,4 @@
-(function(){
+(function(angular){
     angular
         .module('app')
         .config(config);
@@ -15,4 +15,4 @@
 
         $locationProvider.html5Mode(true);
     }
-})();
+})(angular);

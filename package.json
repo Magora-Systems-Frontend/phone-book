@@ -8,11 +8,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://kalyuk@bitbucket.org/shopmaek/client.git"
+    "url": ""
   },
-  "author": "Dmitry Kalyuk",
+  "author": "",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/shopmaek/client#readme",
+  "homepage": "",
   "dependencies": {
     "connect-modrewrite": "^0.8.1",
     "gulp": "^3.9.0",

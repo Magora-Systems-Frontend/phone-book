@@ -1,4 +1,4 @@
-(function(window, angular){
+(function(angular){
 
     'use strict';
 
@@ -6,7 +6,7 @@
         .module('app', [
             'ngRoute',
             'angular-cache',
-            'app.pagination'
+            'app.list'
         ])
 
-})(window, angular);
+})(angular);

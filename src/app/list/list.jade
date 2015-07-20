@@ -1,0 +1,6 @@
+div.col-sm-6
+    ul.list-group
+        li.list-group-item(ng-repeat='item in listCtrl.items | startFrom: listCtrl.startingItem() | limitTo: listCtrl.itemsPerPage track by $index') {{item.surname}} {{item.name}} {{item.phone}}
+            span.glyphicon.glyphicon-remove(ng-click='listCtrl.currentDeletePerson(listCtrl.itemsPerPage*listCtrl.currentPage + $index)')
+            span.glyphicon.glyphicon-pencil(ng-click='listCtrl.currentEditPerson(listCtrl.itemsPerPage*listCtrl.currentPage + $index)')
+    pagination(items="listCtrl.items", current-page="listCtrl.currentPage", items-per-page="listCtrl.itemsPerPage")

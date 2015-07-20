@@ -1,8 +1,8 @@
-(function(){
+(function(angular){
     'use strict';
 
     angular
-        .module('app.pagination')
+        .module('app.list')
         .directive('pagination', pagination);
 
     function pagination(){
@@ -30,8 +30,6 @@
                 };
 
                 this.numberOfPages = function(){
-                    var a = Math.ceil(this.items.length / this.itemsPerPage);
-                    //debugger;
                     return Math.ceil(this.items.length / this.itemsPerPage);
                 };
 
@@ -46,4 +44,4 @@
             controllerAs: 'paginationCtrl'
         }
     }
-})();
+})(angular);
