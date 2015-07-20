@@ -6,7 +6,13 @@
     "dst": "application.css"
   },
   "javascript": {
-    "src": ["./src/**/*.js"],
+    "src": ["./src/app/pagination/pagination.js",
+      "./src/app/pagination/paginationDirective.js",
+      "./src/app/pagination/paginationFilter.js",
+      "./src/app/app.js",
+      "./src/app/form-list/form-list.js",
+      "./src/app/config.js"
+    ],
     "dst": "application.js"
   },
   "templates": {

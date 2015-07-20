@@ -8,7 +8,6 @@
     function startFrom(){
         return function(input, start){
             start = +start;
-            //debugger;
             return input.slice(start);
         }
     }
